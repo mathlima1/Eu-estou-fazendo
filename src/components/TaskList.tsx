@@ -66,7 +66,7 @@ export function TaskList() {
               value={newTaskTitle}
             />
             <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
-              <FiCheckSquare size={16} color="#fff" />
+              <FiCheckSquare size={16} color="#fff" /> <span className="add-task-button-mobile">Adiconar nova task</span>
             </button>
           </div>
         </header>
