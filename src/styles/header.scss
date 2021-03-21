@@ -11,5 +11,9 @@ header.header {
     display: flex;
     align-items: center;
     justify-content: center;
+    h1{
+      color: var(--text-light);
+      font-weight: 400;
+    }
   }
 }
