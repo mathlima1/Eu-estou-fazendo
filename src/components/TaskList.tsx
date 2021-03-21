@@ -26,8 +26,8 @@ export function TaskList() {
     tasks.map((task) => {
       if (id == task.id) {
         task.isComplete = true;
-        // setTasksComplete([...tasksComplete, task]);
-        // tasks.splice(tasks.indexOf(task), 1)
+        setTasksComplete([...tasksComplete, task]);
+        tasks.splice(tasks.indexOf(task), 1)
       }
     })
     setTasks([...tasks])
@@ -42,15 +42,15 @@ export function TaskList() {
     })
     setTasks([...tasks])
   }
-  // function handleRemoveCompleteTask(id: number) {
-  //   // Remova uma task da listagem pelo ID
-  //   tasksComplete.map((task) => {
-  //     if (id == task.id) {
-  //       tasksComplete.splice(tasksComplete.indexOf(task), 1);
-  //     }
-  //   })
-  //   setTasks([...tasks])
-  // }
+  function handleRemoveCompleteTask(id: number) {
+    // Remova uma task da listagem pelo ID
+    tasksComplete.map((task) => {
+      if (id == task.id) {
+        tasksComplete.splice(tasksComplete.indexOf(task), 1);
+      }
+    })
+    setTasks([...tasks])
+  }
 
   return (
     <div className="task-list-wrapper">
@@ -97,7 +97,7 @@ export function TaskList() {
           </ul>
         </main>
       </section>
-      {/* <section className="task-list task-list-completed container">
+      <section className="task-list task-list-completed container">
         <header>
           <h2>Minhas tasks concluidas</h2>
         </header>
@@ -126,7 +126,7 @@ export function TaskList() {
 
           </ul>
         </main>
-      </section> */}
+      </section>
     </div>
   )
 }
